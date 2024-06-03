@@ -94,6 +94,7 @@ def add_context_data(app, pagename, templatename, context, doctree):
     context['t'] = app.site_data['data']['l10n'][language]['t']
 
     # Run only for local development
+    print ("ENVIRON", os.environ.get('READTHEDOCS', None))
     if os.environ.get('READTHEDOCS', None) != 'True':
         context['LOCAL'] = True
         context['PRODUCTION_DOMAIN'] = 'localhost'
