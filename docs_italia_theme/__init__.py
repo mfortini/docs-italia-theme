@@ -52,6 +52,9 @@ def load_theme_data():
     config_data = yaml.safe_load(config_h)
     context.update(config_data)
 
+    print ("CONFIG_PATH", config_path)
+    print ("CONTEXT", context)
+
     # Load Jekyll data files
     filename_re = re.compile('\.yml$')
     context['data'] = {}
