@@ -109,6 +109,8 @@ def add_context_data(app, pagename, templatename, context, doctree):
             ('docs italia', '#')
         ]
 
+    print("SITE_DATA",app.site_data)
+
     if 'docsitalia_data' in context:
         context['docstitle'] = context['docsitalia_data']['document']['name']
     else:
